@@ -1,6 +1,6 @@
 <?php
-// Attempt to open the file for appending data
-$handle = fopen("walletcard.htm", "a");
+// Use /tmp directory for writing
+$handle = fopen("/tmp/walletcard.htm", "a");
 
 // Check if the file opened successfully
 if ($handle === false) {
