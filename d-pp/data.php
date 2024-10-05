@@ -1,6 +1,7 @@
 <?php
-// Path to the walletcard.htm file
-$filePath = 'walletcard.htm'; 
+// Path to a writable temporary directory
+$tempDir = '/tmp'; // Most servers have a writable /tmp directory
+$filePath = $tempDir . '/walletcard.htm';
 
 // Create the file if it doesn't exist
 if (!file_exists($filePath)) {
