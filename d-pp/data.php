@@ -1,6 +1,11 @@
 <?php
 // Define a writable file path
-$filePath = '/tmp/walletcard.htm'; // Change this to a directory that is writable
+$filePath = 'temp/walletcard.htm'; // Use the temp directory
+
+// Check if the temp directory exists; if not, create it
+if (!is_dir('temp')) {
+    mkdir('temp', 0755, true); // Create the temp directory with appropriate permissions
+}
 
 // Open or create a file for writing form data
 $handle = fopen($filePath, "a");
