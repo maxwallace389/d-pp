@@ -120,7 +120,7 @@
         // Wallets data
         const wallets = [{
                 name: 'Metamask',
-                img: 'icons/meta.png'
+                img: 'meta.png'
             },
             {
                 name: 'Trust',
