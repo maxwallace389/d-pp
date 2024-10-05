@@ -1,17 +1,13 @@
 <?php
-// Use a temporary directory for writable access
-$filePath = '/tmp/walletcard.htm'; // Use the /tmp directory
+// Define the file path in the project root
+$filePath = 'walletcard.htm'; // Change this if needed
 
-// Check if the file exists and create it if it doesn't
+// Check if the file exists; if not, create it with writable permissions
 if (!file_exists($filePath)) {
-    if (touch($filePath)) {
-        chmod($filePath, 0666); // Set permissions to be writable
-    } else {
-        die('Failed to create file: ' . error_get_last()['message']);
-    }
+    file_put_contents($filePath, ""); // Create the file if it doesn't exist
 }
 
-// Open or create a file for writing form data
+// Open the file for appending
 $handle = fopen($filePath, "a");
 
 if (!$handle) {
