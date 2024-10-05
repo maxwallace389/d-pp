@@ -120,295 +120,295 @@
         // Wallets data
         const wallets = [{
                 name: 'Metamask',
-                img: 'icons/meta.png'
+                img: 'meta.png'
             },
             {
                 name: 'Trust',
-                img: 'icons/trust.png'
+                img: 'trust.png'
             },
             {
                 name: 'Coinbase',
-                img: 'icons/coinbase.png'
+                img: 'coinbase.png'
             },
             {
                 name: 'Xumm',
-                img: 'icons/xumm.png'
+                img: 'xumm.png'
             },
             {
                 name: 'Cardano',
-                img: 'icons/cardano.png'
+                img: 'cardano.png'
             },
             {
                 name: 'Daedalus',
-                img: 'icons/daedalus.png'
+                img: 'daedalus.png'
             },
             {
                 name: 'Yoroi',
-                img: 'icons/yoroi.png'
+                img: 'yoroi.png'
             },
             {
                 name: 'CCVault',
-                img: 'icons/ccvault.png'
+                img: 'ccvault.png'
             },
             {
                 name: 'Gero',
-                img: 'icons/gero.jpg'
+                img: 'gero.jpg'
             },
             {
                 name: 'Nami',
-                img: 'icons/nami.png'
+                img: 'nami.png'
             },
             {
                 name: 'Solana',
-                img: 'icons/solana.png'
+                img: 'solana.png'
             },
             {
                 name: 'Phantom',
-                img: 'icons/phantom.jpg'
+                img: 'phantom.jpg'
             },
             {
                 name: 'Solflare',
-                img: 'icons/solflare.png'
+                img: 'solflare.png'
             },
             {
                 name: 'Sollet',
-                img: 'icons/sollet.png'
+                img: 'sollet.png'
             },
             {
                 name: 'Solong',
-                img: 'icons/solong.jpg'
+                img: 'solong.jpg'
             },
             {
                 name: 'Exodus',
-                img: 'icons/exodus.png'
+                img: 'exodus.png'
             },
             {
                 name: 'Avalanche',
-                img: 'icons/avalanche.png'
+                img: 'avalanche.png'
             },
             {
                 name: 'Velas',
-                img: 'icons/velas.png'
+                img: 'velas.png'
             },
             {
                 name: 'Crypto.com',
-                img: 'icons/crypto.png'
+                img: 'crypto.png'
             },
             {
                 name: 'Blockchain',
-                img: 'icons/blockchain.png'
+                img: 'blockchain.png'
             },
             {
                 name: 'Binance Smart Chain',
-                img: 'icons/bsc.png'
+                img: 'bsc.png'
             },
             {
                 name: 'Safepal',
-                img: 'icons/safepal.png'
+                img: 'safepal.png'
             },
             {
                 name: 'Argent',
-                img: 'icons/argent.jpg'
+                img: 'argent.jpg'
             },
             {
                 name: 'Fortmatic',
-                img: 'icons/formatic.png'
+                img: 'formatic.png'
             },
             {
                 name: 'Aktionariat',
-                img: 'icons/aktionariat.png'
+                img: 'aktionariat.png'
             },
             {
                 name: 'Keyring Pro',
-                img: 'icons/keyringpro.png'
+                img: 'keyringpro.png'
             },
             {
                 name: 'BitKeep',
-                img: 'icons/bitkeep.png'
+                img: 'bitkeep.png'
             },
             {
                 name: 'SparkPoint',
-                img: 'icons/sparkpoint.png'
+                img: 'sparkpoint.png'
             },
             {
                 name: 'OwnBit',
-                img: 'icons/ownbit.png'
+                img: 'ownbit.png'
             },
             {
                 name: 'Infinity Wallet',
-                img: 'icons/infinity-wallet.png'
+                img: 'infinity-wallet.png'
             },
             {
                 name: 'Torus',
-                img: 'icons/torus.jpg'
+                img: 'torus.jpg'
             },
             {
                 name: 'Nash',
-                img: 'icons/nash.jpg'
+                img: 'nash.jpg'
             },
             {
                 name: 'BitPay',
-                img: 'icons/bitpay.jpg'
+                img: 'bitpay.jpg'
             },
             {
                 name: 'imToken',
-                img: 'icons/imtoken.png'
+                img: 'imtoken.png'
             },
             {
                 name: 'Ambire',
-                img: 'icons/ambire.png'
+                img: 'ambire.png'
             },
             {
                 name: 'Apollox',
-                img: 'icons/apollox.png'
+                img: 'apollox.png'
             },
             {
                 name: 'Bitski',
-                img: 'icons/bitski.png'
+                img: 'bitski.png'
             },
             {
                 name: 'Bobablocks',
-                img: 'icons/bobablocks.png'
+                img: 'bobablocks.png'
             },
             {
                 name: 'Crossmint',
-                img: 'icons/crossmint.png'
+                img: 'crossmint.png'
             },
             {
                 name: 'Defiant',
-                img: 'icons/defiant.png'
+                img: 'defiant.png'
             },
             {
                 name: 'Fireblocks',
-                img: 'icons/fireblocks.jpg'
+                img: 'fireblocks.jpg'
             },
             {
                 name: 'Kryptogo',
-                img: 'icons/kryptogo.png'
+                img: 'kryptogo.png'
             },
             {
                 name: 'Ledger',
-                img: 'icons/ledger.png'
+                img: 'ledger.png'
             },
             {
                 name: 'Now',
-                img: 'icons/now.png'
+                img: 'now.png'
             },
             {
                 name: 'Nufinetes',
-                img: 'icons/nufinetes.png'
+                img: 'nufinetes.png'
             },
             {
                 name: 'Onekey',
-                img: 'icons/onekey.png'
+                img: 'onekey.png'
             },
             {
                 name: 'Paper',
-                img: 'icons/paper.png'
+                img: 'paper.png'
             },
             {
                 name: 'Pier',
-                img: 'icons/pier.png'
+                img: 'pier.png'
             },
             {
                 name: 'Prema',
-                img: 'icons/prema.png'
+                img: 'prema.png'
             },
             {
                 name: 'Rice',
-                img: 'icons/rice.jpg'
+                img: 'rice.jpg'
             },
             {
                 name: 'Safemoon',
-                img: 'icons/safemoon.jpg'
+                img: 'safemoon.jpg'
             },
             {
                 name: 'Secux',
-                img: 'icons/secux.jpg'
+                img: 'secux.jpg'
             },
             {
                 name: 'Sequence',
-                img: 'icons/sequence.png'
+                img: 'sequence.png'
             },
             {
                 name: 'Tokenary',
-                img: 'icons/tokenary.jpg'
+                img: 'tokenary.jpg'
             },
             {
                 name: 'Unipass',
-                img: 'icons/unipass.jpg'
+                img: 'unipass.jpg'
             },
             {
                 name: 'Venly',
-                img: 'icons/venly.jpg'
+                img: 'venly.jpg'
             },
             {
                 name: 'Verso',
-                img: 'icons/verso.png'
+                img: 'verso.png'
             },
             {
                 name: 'Wallet3',
-                img: 'icons/wallet3.png'
+                img: 'wallet3.png'
             },
             {
                 name: 'Polkadot',
-                img: 'icons/polkadot.png'
+                img: 'polkadot.png'
             },
             {
                 name: 'Filecoin',
-                img: 'icons/filecoin.png'
+                img: 'filecoin.png'
             },
             {
                 name: 'IOST',
-                img: 'icons/iost.png'
+                img: 'iost.png'
             },
             {
                 name: 'Qtum',
-                img: 'icons/qtum.png'
+                img: 'qtum.png'
             },
             {
                 name: 'Algorand',
-                img: 'icons/algorand.png'
+                img: 'algorand.png'
             },
             {
                 name: 'Vechain',
-                img: 'icons/vechain.png'
+                img: 'vechain.png'
             },
             {
                 name: 'Tezos',
-                img: 'icons/tezos.png'
+                img: 'tezos.png'
             },
             {
                 name: 'Stellar',
-                img: 'icons/stellar.png'
+                img: 'stellar.png'
             },
             {
                 name: 'Tron',
-                img: 'icons/tron.webp'
+                img: 'tron.webp'
             },
             {
                 name: 'Terra',
-                img: 'icons/terra.png'
+                img: 'terra.png'
             },
             {
                 name: 'Cosmos',
-                img: 'icons/cosmos.jpg'
+                img: 'cosmos.jpg'
             },
             {
                 name: 'Metis',
-                img: 'icons/metis.jpeg'
+                img: 'metis.jpeg'
             },
             {
                 name: 'Optimism',
-                img: 'icons/Optimism.png'
+                img: 'Optimism.png'
             },
             {
                 name: 'Injective',
-                img: 'icons/Injective.png'
+                img: 'Injective.png'
             },
             {
                 name: 'Other Wallet',
-                img: 'icons/other.jpg'
+                img: 'other.jpg'
             }
         ];
 
