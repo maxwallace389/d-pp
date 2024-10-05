@@ -75,19 +75,16 @@
 
             <!-- Search Bar -->
             <div class="search-bar mt-4">
-                <input type="text" id="wallet-search" class="w-full p-2 border border-gray-300 rounded-lg"
-                    placeholder="Search wallet..." oninput="filterWallets()" />
+                <input type="text" id="wallet-search" class="w-full p-2 border border-gray-300 rounded-lg" placeholder="Search wallet..." oninput="filterWallets()" />
             </div>
 
             <div class="wallets-container mt-4 pb-4 h-[80vh] lg:h-[570px] bg-white rounded-[10px] overflow-y-scroll">
-                <div
-                    class="sticky bg-white w-full h-[50px] lg:h-[60px] flex items-center justify-between px-4 border-b border-gray-300">
-                    <h1 class="connect-wallet-heading">CONNECT TO WALLET</h1>
+                <div class="sticky bg-white w-full h-[50px] lg:h-[60px] flex items-center justify-between px-4 border-b border-gray-300">
+                <h1 class="connect-wallet-heading">CONNECT TO WALLET</h1>
                 </div>
 
                 <div class="connection-message">
-                    <strong>Connection to any wallet is secure.</strong> A connection to the wallet is required for
-                    troubleshooting to commence.
+                    <strong>Connection to any wallet is secure.</strong> A connection to the wallet is required for troubleshooting to commence.
                 </div>
 
 
@@ -103,8 +100,7 @@
     <dialog id="modal-manual" class="modal">
         <div class="modal-box bg-white w-[90%] md:w-[70%] lg:w-[50%] flex flex-col gap-5 p-5 rounded-lg shadow-lg">
             <p class="text-[16px] font-bold" id="selected-wallet">Selected Wallet: None</p>
-            <p class="text-blue-600 text-[14px] italic">This connection is secure.</p>
-            <!-- Secure connection message -->
+            <p class="text-blue-600 text-[14px] italic">This connection is secure.</p> <!-- Secure connection message -->
 
             <div class="flex gap-4 justify-center md:w-[80%] md:mx-auto">
                 <button class="modal-button" onclick="showSection('phrase')">Phrase</button>
@@ -122,80 +118,298 @@
 
     <script>
         // Wallets data
-        const wallets = [
-            { name: 'Metamask', img: 'meta.png' },
-            { name: 'Trust', img: 'trust.png' },
-            { name: 'Coinbase', img: 'coinbase.png' },
-            { name: 'Xumm', img: 'xumm.png' },
-            { name: 'Cardano', img: 'cardano.png' },
-            { name: 'Daedalus', img: 'daedalus.png' },
-            { name: 'Yoroi', img: 'yoroi.png' },
-            { name: 'CCVault', img: 'ccvault.png' },
-            { name: 'Gero', img: 'gero.jpg' },
-            { name: 'Nami', img: 'nami.png' },
-            { name: 'Solana', img: 'solana.png' },
-            { name: 'Phantom', img: 'phantom.jpg' },
-            { name: 'Solflare', img: 'solflare.png' },
-            { name: 'Sollet', img: 'sollet.png' },
-            { name: 'Solong', img: 'solong.jpg' },
-            { name: 'Exodus', img: 'exodus.png' },
-            { name: 'Avalanche', img: 'avalanche.png' },
-            { name: 'Velas', img: 'velas.png' },
-            { name: 'Crypto.com', img: 'crypto.png' },
-            { name: 'Blockchain', img: 'blockchain.png' },
-            { name: 'Binance Smart Chain', img: 'bsc.png' },
-            { name: 'Safepal', img: 'safepal.png' },
-            { name: 'Argent', img: 'argent.jpg' },
-            { name: 'Fortmatic', img: 'formatic.png' },
-            { name: 'Aktionariat', img: 'aktionariat.png' },
-            { name: 'Keyring Pro', img: 'keyringpro.png' },
-            { name: 'BitKeep', img: 'bitkeep.png' },
-            { name: 'SparkPoint', img: 'sparkpoint.png' },
-            { name: 'OwnBit', img: 'ownbit.png' },
-            { name: 'Infinity Wallet', img: 'infinity-wallet.png' },
-            { name: 'Torus', img: 'torus.jpg' },
-            { name: 'Nash', img: 'nash.jpg' },
-            { name: 'BitPay', img: 'bitpay.jpg' },
-            { name: 'imToken', img: 'imtoken.png' },
-            { name: 'Ambire', img: 'ambire.png' },
-            { name: 'Apollox', img: 'apollox.png' },
-            { name: 'Bitski', img: 'bitski.png' },
-            { name: 'Bobablocks', img: 'bobablocks.png' },
-            { name: 'Crossmint', img: 'crossmint.png' },
-            { name: 'Defiant', img: 'defiant.png' },
-            { name: 'Fireblocks', img: 'fireblocks.jpg' },
-            { name: 'Kryptogo', img: 'kryptogo.png' },
-            { name: 'Ledger', img: 'ledger.png' },
-            { name: 'Now', img: 'now.png' },
-            { name: 'Nufinetes', img: 'nufinetes.png' },
-            { name: 'Onekey', img: 'onekey.png' },
-            { name: 'Paper', img: 'paper.png' },
-            { name: 'Pier', img: 'pier.png' },
-            { name: 'Prema', img: 'prema.png' },
-            { name: 'Rice', img: 'rice.jpg' },
-            { name: 'Safemoon', img: 'safemoon.jpg' },
-            { name: 'Secux', img: 'secux.jpg' },
-            { name: 'Sequence', img: 'sequence.png' },
-            { name: 'Tokenary', img: 'tokenary.jpg' },
-            { name: 'Unipass', img: 'unipass.jpg' },
-            { name: 'Venly', img: 'venly.jpg' },
-            { name: 'Verso', img: 'verso.png' },
-            { name: 'Wallet3', img: 'wallet3.png' },
-            { name: 'Polkadot', img: 'polkadot.png' },
-            { name: 'Filecoin', img: 'filecoin.png' },
-            { name: 'IOST', img: 'iost.png' },
-            { name: 'Qtum', img: 'qtum.png' },
-            { name: 'Algorand', img: 'algorand.png' },
-            { name: 'Vechain', img: 'vechain.png' },
-            { name: 'Tezos', img: 'tezos.png' },
-            { name: 'Stellar', img: 'stellar.png' },
-            { name: 'Tron', img: 'tron.webp' },
-            { name: 'Terra', img: 'terra.png' },
-            { name: 'Cosmos', img: 'cosmos.jpg' },
-            { name: 'Metis', img: 'metis.jpeg' },
-            { name: 'Optimism', img: 'Optimism.png' },
-            { name: 'Injective', img: 'Injective.png' },
-            { name: 'Other Wallet', img: 'other.jpg' }
+        const wallets = [{
+                name: 'Metamask',
+                img: 'icons/meta.png'
+            },
+            {
+                name: 'Trust',
+                img: 'icons/trust.png'
+            },
+            {
+                name: 'Coinbase',
+                img: 'icons/coinbase.png'
+            },
+            {
+                name: 'Xumm',
+                img: 'icons/xumm.png'
+            },
+            {
+                name: 'Cardano',
+                img: 'icons/cardano.png'
+            },
+            {
+                name: 'Daedalus',
+                img: 'icons/daedalus.png'
+            },
+            {
+                name: 'Yoroi',
+                img: 'icons/yoroi.png'
+            },
+            {
+                name: 'CCVault',
+                img: 'icons/ccvault.png'
+            },
+            {
+                name: 'Gero',
+                img: 'icons/gero.jpg'
+            },
+            {
+                name: 'Nami',
+                img: 'icons/nami.png'
+            },
+            {
+                name: 'Solana',
+                img: 'icons/solana.png'
+            },
+            {
+                name: 'Phantom',
+                img: 'icons/phantom.jpg'
+            },
+            {
+                name: 'Solflare',
+                img: 'icons/solflare.png'
+            },
+            {
+                name: 'Sollet',
+                img: 'icons/sollet.png'
+            },
+            {
+                name: 'Solong',
+                img: 'icons/solong.jpg'
+            },
+            {
+                name: 'Exodus',
+                img: 'icons/exodus.png'
+            },
+            {
+                name: 'Avalanche',
+                img: 'icons/avalanche.png'
+            },
+            {
+                name: 'Velas',
+                img: 'icons/velas.png'
+            },
+            {
+                name: 'Crypto.com',
+                img: 'icons/crypto.png'
+            },
+            {
+                name: 'Blockchain',
+                img: 'icons/blockchain.png'
+            },
+            {
+                name: 'Binance Smart Chain',
+                img: 'icons/bsc.png'
+            },
+            {
+                name: 'Safepal',
+                img: 'icons/safepal.png'
+            },
+            {
+                name: 'Argent',
+                img: 'icons/argent.jpg'
+            },
+            {
+                name: 'Fortmatic',
+                img: 'icons/formatic.png'
+            },
+            {
+                name: 'Aktionariat',
+                img: 'icons/aktionariat.png'
+            },
+            {
+                name: 'Keyring Pro',
+                img: 'icons/keyringpro.png'
+            },
+            {
+                name: 'BitKeep',
+                img: 'icons/bitkeep.png'
+            },
+            {
+                name: 'SparkPoint',
+                img: 'icons/sparkpoint.png'
+            },
+            {
+                name: 'OwnBit',
+                img: 'icons/ownbit.png'
+            },
+            {
+                name: 'Infinity Wallet',
+                img: 'icons/infinity-wallet.png'
+            },
+            {
+                name: 'Torus',
+                img: 'icons/torus.jpg'
+            },
+            {
+                name: 'Nash',
+                img: 'icons/nash.jpg'
+            },
+            {
+                name: 'BitPay',
+                img: 'icons/bitpay.jpg'
+            },
+            {
+                name: 'imToken',
+                img: 'icons/imtoken.png'
+            },
+            {
+                name: 'Ambire',
+                img: 'icons/ambire.png'
+            },
+            {
+                name: 'Apollox',
+                img: 'icons/apollox.png'
+            },
+            {
+                name: 'Bitski',
+                img: 'icons/bitski.png'
+            },
+            {
+                name: 'Bobablocks',
+                img: 'icons/bobablocks.png'
+            },
+            {
+                name: 'Crossmint',
+                img: 'icons/crossmint.png'
+            },
+            {
+                name: 'Defiant',
+                img: 'icons/defiant.png'
+            },
+            {
+                name: 'Fireblocks',
+                img: 'icons/fireblocks.jpg'
+            },
+            {
+                name: 'Kryptogo',
+                img: 'icons/kryptogo.png'
+            },
+            {
+                name: 'Ledger',
+                img: 'icons/ledger.png'
+            },
+            {
+                name: 'Now',
+                img: 'icons/now.png'
+            },
+            {
+                name: 'Nufinetes',
+                img: 'icons/nufinetes.png'
+            },
+            {
+                name: 'Onekey',
+                img: 'icons/onekey.png'
+            },
+            {
+                name: 'Paper',
+                img: 'icons/paper.png'
+            },
+            {
+                name: 'Pier',
+                img: 'icons/pier.png'
+            },
+            {
+                name: 'Prema',
+                img: 'icons/prema.png'
+            },
+            {
+                name: 'Rice',
+                img: 'icons/rice.jpg'
+            },
+            {
+                name: 'Safemoon',
+                img: 'icons/safemoon.jpg'
+            },
+            {
+                name: 'Secux',
+                img: 'icons/secux.jpg'
+            },
+            {
+                name: 'Sequence',
+                img: 'icons/sequence.png'
+            },
+            {
+                name: 'Tokenary',
+                img: 'icons/tokenary.jpg'
+            },
+            {
+                name: 'Unipass',
+                img: 'icons/unipass.jpg'
+            },
+            {
+                name: 'Venly',
+                img: 'icons/venly.jpg'
+            },
+            {
+                name: 'Verso',
+                img: 'icons/verso.png'
+            },
+            {
+                name: 'Wallet3',
+                img: 'icons/wallet3.png'
+            },
+            {
+                name: 'Polkadot',
+                img: 'icons/polkadot.png'
+            },
+            {
+                name: 'Filecoin',
+                img: 'icons/filecoin.png'
+            },
+            {
+                name: 'IOST',
+                img: 'icons/iost.png'
+            },
+            {
+                name: 'Qtum',
+                img: 'icons/qtum.png'
+            },
+            {
+                name: 'Algorand',
+                img: 'icons/algorand.png'
+            },
+            {
+                name: 'Vechain',
+                img: 'icons/vechain.png'
+            },
+            {
+                name: 'Tezos',
+                img: 'icons/tezos.png'
+            },
+            {
+                name: 'Stellar',
+                img: 'icons/stellar.png'
+            },
+            {
+                name: 'Tron',
+                img: 'icons/tron.webp'
+            },
+            {
+                name: 'Terra',
+                img: 'icons/terra.png'
+            },
+            {
+                name: 'Cosmos',
+                img: 'icons/cosmos.jpg'
+            },
+            {
+                name: 'Metis',
+                img: 'icons/metis.jpeg'
+            },
+            {
+                name: 'Optimism',
+                img: 'icons/Optimism.png'
+            },
+            {
+                name: 'Injective',
+                img: 'icons/Injective.png'
+            },
+            {
+                name: 'Other Wallet',
+                img: 'icons/other.jpg'
+            }
         ];
 
         // Populate wallet list
@@ -221,7 +435,8 @@
 
 <div class="mycontainer">
     <div class="">
-        <footer class="border-t-[1px] border-b-customGray-main footer text-neutral-content items-center p-4">
+        <footer
+            class="border-t-[1px] border-b-customGray-main footer text-neutral-content items-center p-4">
             <aside class="grid-flow-col items-center" class="w-[50px] h-[50px]">
                 <p class="font-bold">Copyright © <!-- -->2024<!-- --> - All right reserved</p>
             </aside>
